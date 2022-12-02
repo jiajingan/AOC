@@ -19,3 +19,5 @@ for i in lines:
         maxCalories = currCal
 
 print(maxCalories)
+#O(n) in time complexity
+#O(1) in space complexity
