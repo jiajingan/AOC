@@ -1,7 +1,7 @@
 # AOC day 1 in python
 
 # parse file
-fname = "adventofcode22/input.txt"
+fname = "adventofcode22/python/d1/input.txt"
 with open(fname) as f:
     lines = []
     for line in f:
@@ -30,5 +30,10 @@ for i in lines:
 print(maxCalories)
 print(maxThree)
 print(sum(maxThree))
+#part 1 
 #O(n) in time complexity
 #O(1) in space complexity
+
+#part 2 
+#O(n) in time complexity
+#O(n) in space complexity, list
