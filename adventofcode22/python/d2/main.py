@@ -8,19 +8,10 @@ with open(fname) as f:
         lines.append(line.strip("\n").split())
 
 RPS = {
-    'A':1,
-    'B':2,
-    'C':3,
     'X':1,
     'Y':2,
     'Z':3 
 }
-
-# RPS1 = {
-#     ['A','X']:1,
-#     ['B','Y']:2,
-#     ['C','Z']:3
-# }
 # https://davidamos.dev/revisiting-rock-paper-scissors-in-python/
 """
     suppose 
@@ -41,9 +32,9 @@ convert = {
 }
 totalScore = 0
 for i in lines:
+    # 0 is opponent, 1 is me
     # print(loses_to[i[0]])
-    if(loses_to[i[0]] == convert[i[1]]):
-        # print(i)
+    if(i[0] == loses_to[convert[i[1]]]):
         #win
         totalScore += RPS[i[1]] + 6
     if(convert[i[1]] == loses_to[i[0]]):
