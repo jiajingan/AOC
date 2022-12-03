@@ -57,11 +57,15 @@ for i in lines:
         #lose
         
         #loseto get win pick
-        losePick = loses_to[convert[i[1]]]
+        losePick = loses_to[i[0]]
+        # print(i[0])
+        # print("me:"+losePick)
         totalScorePart2 += RPS[losePick] + 0
     if(i[1]=="Z"):
         #win
-        winPick = loses_to[i[0]]
+        winPick = loses_to[loses_to[i[0]]]
+        # print(i[0])
+        # print("me:"+winPick)
         totalScorePart2 += RPS[winPick] + 6
 print(totalScore)
 print(totalScorePart2)
