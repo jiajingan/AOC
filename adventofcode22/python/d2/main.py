@@ -10,7 +10,10 @@ with open(fname) as f:
 RPS = {
     'X':1,
     'Y':2,
-    'Z':3 
+    'Z':3,
+    'A':1,
+    'B':2,
+    'C':3
 }
 # https://davidamos.dev/revisiting-rock-paper-scissors-in-python/
 """
@@ -31,9 +34,9 @@ convert = {
     "Z": "C"
 }
 totalScore = 0
+totalScorePart2 = 0
 for i in lines:
     # 0 is opponent, 1 is me
-    # print(loses_to[i[0]])
     if(i[0] == loses_to[convert[i[1]]]):
         #win
         totalScore += RPS[i[1]] + 6
@@ -43,6 +46,23 @@ for i in lines:
     if(i[0] == convert[i[1]]):
         totalScore += RPS[i[1]] + 3
         #tie
-
+    
+    # part 2 
+    # X means lose, Y = draw, Z = win
+    if(i[1]=="Y"):
+    # 0 is opponent, 1 is me
+        #draw
+        totalScorePart2 += RPS[i[0]] + 3
+    if(i[1]=="X"):
+        #lose
+        
+        #loseto get win pick
+        losePick = loses_to[convert[i[1]]]
+        totalScorePart2 += RPS[losePick] + 0
+    if(i[1]=="Z"):
+        #win
+        winPick = loses_to[i[0]]
+        totalScorePart2 += RPS[winPick] + 6
 print(totalScore)
+print(totalScorePart2)
 # print(lines)
