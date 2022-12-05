@@ -1,4 +1,5 @@
 import re
+from collections import deque
 # parse file
 fname = "adventofcode22/python/d5/input.txt"
 with open(fname,'r', encoding='utf-8') as f:
