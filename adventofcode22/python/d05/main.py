@@ -1,7 +1,7 @@
 import re
 from collections import deque
 # parse file
-fname = "adventofcode22/python/d5/input.txt"
+fname = "adventofcode22/python/d05/input.txt"
 with open(fname,'r', encoding='utf-8') as f:
     lines = f.readlines()
     # process moving data
@@ -13,46 +13,24 @@ with open(fname,'r', encoding='utf-8') as f:
         movingList.append(findNum)
     
     #try substring approach
-    mover1 = []
-    mover2 = []
-    mover3 = []
-    mover4 = []
-    mover5 = []
-    mover6 = []
-    mover7 = []
-    mover8 = []
-    
-    # a = lines[1][1::4].strip()
-    # print(a)
-    moverList = []
+    a = lines[7][1::4]
+    print(a)
+    moverBigList = []
+    # https://www.w3resource.com/python-exercises/list/python-data-type-list-exercise-168.php
     for i in range(0,8):
-        a = lines[i][1::4].strip()
+        # a = lines[i][1::4]
+        moverList = []
         for j in range(len(a)):
-            if(j == 0 and a[j] != ' '):
-                mover1.append(a[j])
-            if(j == 1 and a[j] != ' '):
-                mover2.append(a[j])
-            if(j == 2 and a[j] != ' '):
-                mover3.append(a[j])
-            if(j == 3 and a[j] != ' '):
-                mover4.append(a[j])
-            if(j == 4 and a[j] != ' '):
-                mover5.append(a[j])
-            if(j == 5 and a[j] != ' '):
-                mover6.append(a[j])
-            if(j == 6 and a[j] != ' '):
-                mover7.append(a[j])
-            if(j == 7 and a[j] != ' '):
-                mover8.append(a[j])
-    moverList.append(mover1)
-    moverList.append(mover2)
-    moverList.append(mover3)
-    moverList.append(mover4)
-    moverList.append(mover5)
-    moverList.append(mover6)
-    moverList.append(mover7)
-    moverList.append(mover8)
+            a = lines[i][1::4]
+            # print(lines[i][1::4][j])
+                # moverList = []
+            moverList.append(a[j])
+            # moverDict[i] = moverList
+                #changed index fixed
+        # print(type(moverList))
+        moverBigList.append(moverList)
 
 # for i in movingList:
     
-print(moverList[1])
+# print(moverList[1])
+print(moverBigList)
