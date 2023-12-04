@@ -1,12 +1,12 @@
-import sys
-sys.path.append("adventofcode15/python/")
+# import sys
+# sys.path.append("adventofcode15/python/")
 
 import input
 # from ..input import inputFile
 fname =  "adventofcode15/input/d1/input.txt"
 
 # part 1 
-data = input.inputFile(fname)
+data = input.inputFile(fname, True)
 # print(data)
 def part1(data):
     floor = 0

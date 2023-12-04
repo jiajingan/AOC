@@ -40,7 +40,7 @@ int part2(std::fstream &fs, std::string line, int floor, int pos) {
 int main(int argc, char **argv) {
 
     std::string test("()(");
-    std::fstream fs("/Users/jackiegan/fun/AOC/adventofcode15/cpp/d1/input.txt", std::fstream::in | std::fstream::out);
+    std::fstream fs("/Users/jackiegan/fun/AOC/adventofcode15/input/d1/input.txt", std::fstream::in | std::fstream::out);
     std::string line;
     int floor = 0;
     int pos = 0;
